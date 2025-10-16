@@ -40,8 +40,86 @@ header a{
     left: 0; */
     inset: 0 0 0 0;
 }
-.carousel .list .items IMG{
+.carousel .list .items img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.carousel .list .items .content{
+    position:absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #000;
+}
+.carousel .list .items .content .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .items .content .title,
+.carousel .list .items .content .topic{
+    font-weight: bold;
+    font-size: 5em;
+    line-height: 1.3em;
+}
+.carousel .list .items .content .topic{
+    color: #f1683a;
+}
+.carousel .list .items .content .buttons{
+    display: grid;
+    grid-template-columns: repeat(2,130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .items .content button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.carousel .list .items .content button:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    border: 1px solid #eee;
+
+}
+/* thumbnail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: bold;
 }
